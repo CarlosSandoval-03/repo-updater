@@ -25,7 +25,7 @@
 
 answer=$(notify-send --app-name="Repos" --icon=system-software-update \
   --action=yes=Actualizar --action=no="Ahora no" --wait \
-  "Actualizar repositorios" "¿Hacer git pull en ~/Desktop/Decompiled?")
+  "Actualizar repositorios" "¿Hacer git pull en $(dirname "$0")?")
 [ "$answer" = "yes" ] || exit 0
 
 # Si la llave no está en el agente, pide la passphrase con ksshaskpass (una vez por sesión).
